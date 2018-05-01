@@ -1,0 +1,312 @@
+ul,
+ol {
+	list-style: none;
+}
+td {
+  button, a ,input{
+    margin: 5px!important;
+  }
+  .input-group .form-control {
+    width: 105px;
+  }
+  .btn {
+    padding: 12px;
+  }
+}
+select.form-control {
+  padding: 8px;
+}
+.form-control:focus {
+	border: 1px solid $border-color;
+	@include box-shadow(none);
+}
+.btn-group.open .dropdown-toggle {
+  @include box-shadow(none);
+}
+.dropdown-menu {
+	padding: 20px;
+}
+.form-control {
+  padding: 12px;
+}
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: inherit; // Move up sibling radios or checkboxes for tighter spacing
+}
+.buttons {
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 40px;
+}
+.container-fluid {
+    padding: 0;
+}
+//
+// Carousel
+// --------------------------------------------------
+.carousel-control {
+	height: $carousel-control-width;
+	display: inline-block;
+	line-height: $carousel-control-width;
+    border: 1px solid $carousel-control-color;
+  @include border-radius(2px);
+	&:hover,
+	&:focus {
+    color: $link-color;
+    background: $carousel-indicator-active-bg;
+	}
+	&.left {
+	 left: -65px;
+	}
+    &.right {
+    }
+}
+
+
+//
+// Panel
+// --------------------------------------------------
+.panel {
+  	@include box-shadow(none);
+  	position: relative;
+  	margin-bottom: 30px;
+}
+.panel-heading {
+}
+.panel-title {
+	font-size: 14px;
+	font-family: $headings-font-family;
+    color: $link-color;
+}
+.panel-group {
+  .panel {
+    padding: 0;
+  }
+  .panel-heading {
+    padding-bottom: 0;
+    @include rtl-text-align-left();
+  }
+}
+//
+// Navs
+// --------------------------------------------------
+.navbar-collapse {
+  padding: 0;
+}
+.nav-tabs {
+  > li {
+    float: none;
+    display: inline-block;
+    > a {
+      font-size: $font-size-base;
+    }
+
+  }
+}
+.nav-first {
+	> li {
+	 	&:first-child {
+	 		> a {
+				@include rtl-padding-left(0);
+	 		}
+	 	}
+	 	>a:hover {
+	 		color: $theme-color-second;
+	 	}
+	 }
+}
+.tab-content > .tab-pane {
+
+}
+.tab-content {
+	background-color: #fff;
+	padding-top: 0px;
+}
+#tab-description {
+ 	font-size: 16px;
+  font-weight: 300;
+}
+
+//
+// Forms
+// --------------------------------------------------
+
+.form-control {
+	@include placeholder-font-family($font-family-base);
+	@include box-shadow(none);
+	height: auto;
+}
+
+.radio label, .checkbox label {
+    color: $link-color;
+}
+.list-group {
+    margin: 0;
+    padding: 0;
+    > li {
+        border-left: none;
+        border-right: none;
+        font-size: 10px;
+        font-family: $headings-font-family;
+        text-transform: uppercase;
+        border-bottom: 1px solid #ededed;
+        margin-bottom: 1px;
+        position: relative;
+        padding: 10px 25px;
+        &:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: '\f26e';
+            position: absolute;
+            color: #d8d7d7;
+            top: 12px;
+            @include rtl-left(0);
+        }
+        a {
+            &.active,
+            &.active:hover,
+            &.active:focus,
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+    ul {
+        @include rtl-padding-left(10px);
+        > li{
+            list-style: none;
+            padding: 8px 0;
+            border: none;
+            &:before {
+                content: "\f0da";
+                display: inline-block;
+                font-family: fontawesome;
+                @include rtl-margin-right(10px);
+                font-size: 10px;
+                color: $brand-primary;
+            }
+            > a {
+                color: #999;
+            }
+        }
+    }
+    .head {
+        display: none;
+    }
+}
+//button\
+button {
+	background: transparent;
+	border: none;
+	&:hover {
+		color: $brand-primary;
+	}
+}
+.btn {
+  text-transform: uppercase;
+  font-family: $headings-font-family;
+  &.btn-link {
+    text-transform: capitalize;
+    font-family: $font-family-base;
+    font-size: 22px;
+  }
+}
+//well
+.well {
+  min-height: 20px;
+  margin-bottom: 20px;
+  @include box-shadow(none);
+
+}
+.pagination {
+	margin: 0;
+  > li {
+    > a,
+    > span {
+      padding: 0;
+      font-size: 12px;
+      font-family: $headings-font-family;
+      text-align: center;
+      line-height: 32px;
+      @include size(30px,30px);
+      @include rtl-margin-left(5px);
+      @include border-radius(3px);
+    }
+  }
+}
+.breadcrumb{
+  position: relative;
+  padding: 15px 0;
+  margin: 30px 0;
+  text-align: center;
+  font-size: $font-size-base;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  a {
+    color: #999;
+  }
+  > li{
+    padding: 0 10px;
+    position: relative;
+    &:after {
+      position: absolute;
+      display: inline-block;
+        font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\f2fb';
+      top: 2px;
+      @include rtl-right(0);
+      color: $brand-primary;
+    }
+    & + li:before {
+      content: none;
+    }
+    &:last-child{
+      &:after {
+        content: none;
+      }
+      a {color: $link-color;}
+    }
+  }
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: transparent;
+}
+.img-thumbnail {
+	border: none;
+}
+//label
+.control-label {
+    font-weight: normal;
+    color: #000;
+}
+
+
+div.required .control-label:before {
+    content: '* ';
+    color: #F00;
+    font-weight: bold;
+}
+button.close {
+	padding: 0 10px;
+}
+.img-responsive {
+	display: inline-block;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	text-transform: uppercase;
+}
+.list-group-item {
+  border: none;
+}

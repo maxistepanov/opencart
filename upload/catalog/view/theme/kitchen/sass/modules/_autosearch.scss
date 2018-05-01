@@ -1,0 +1,94 @@
+.autosearch-wrapper {
+    background:$white;
+    color: $theme-color-default;
+    .input-group-btn {
+        position: relative;
+        &:after {
+            background: #fff;
+            line-height: 40px;
+            position: absolute;
+            @include rtl-right(0);
+            text-align: center;
+            top: 0px;
+            font-family: 'FontAwesome';
+            content: "\f107";
+            font-size:$font-size-base;
+            @include size(35px,40px);
+            color: $theme-color;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 80%;
+            background: #ededed;
+            top: 5px;
+            @include rtl-left(0px);
+        }
+    }
+    .category_filter{
+        border: none;
+        display: inline-block;
+        font-size: 16px;
+        height: 40px;
+        line-height: 30px;
+        background-color: #fff;
+        @include rtl-padding-left(15px);
+        @media(max-width: $screen-xs) {
+            max-width: 130px;
+        }
+    }
+    .search_query{
+        background-color: transparent;
+        border: 0;
+        height: 40px;
+        &:focus {
+            @include box-shadow(inherit);
+        }
+    }
+    .input-group {
+        width: 100%;
+        @include rtl-padding-right(46px);
+        border: 1px solid $border-color;
+    }
+    .button-search {
+        position: absolute;
+        @include rtl-right(-4px);
+        top: 0;
+        border: 0;
+        @include size(50px,40px);
+        padding:0;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 80%;
+            background: #ededed;
+            top: 5px;
+            @include rtl-left(-1px);
+        }
+        &:hover{
+            background: $theme-color;
+            color: $white;
+        }
+    }
+    .dropdown-menu {
+        z-index: 999;
+        > li {
+            &.clearfix {
+                border-bottom: 1px dashed $border-color;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            > a {
+                padding: 0;
+            }
+            .media-body{
+                @include rtl-padding-left(10px);
+            }
+        }
+    }
+}

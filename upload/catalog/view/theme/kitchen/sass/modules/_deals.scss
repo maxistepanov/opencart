@@ -1,0 +1,64 @@
+
+.productdeals {
+	.item-countdown {
+        margin: 0 auto;
+        padding-top: 20px;
+        z-index: 10;
+        position: relative;
+		ul {
+			margin-bottom: 0;
+		}
+		li {
+			text-align: center;
+			color: $theme-color-default ;
+			cursor: pointer;
+			text-align: center;
+			display: inline-block;
+			text-transform: uppercase;
+			background: #fafafa;
+            font-family: $font-family-base;
+			margin: 0 2px;
+            line-height: 44px;
+            border-top: 1px solid $border-color;
+			@include border-radius(4px);
+			width: 20%;
+			.countdown_num {
+				span{
+					display: inline-block;
+					position:inherit;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+    .product-block {
+
+    }
+	&.deals {
+        padding: 40px 0;
+        .panel-title {
+            color: $white;
+            text-align: center;
+        }
+        .product-block {
+            border: none;
+            .product-meta {
+                padding: 30px;
+            }
+            .image {
+                @include rtl-border-right(1px solid $border-color);
+            }
+        }
+        .item-countdown {
+            padding-top: 70px;
+        }
+    }
+}
+.pavdeals.tab-group {
+    margin: 0;
+    padding: 0;
+    .deals-option {
+        border: none;
+    }
+}
+

@@ -1,0 +1,10 @@
+.pavpopulartag {
+    a {
+        border: 1px solid #565656;
+        border: 1px solid $border-color;
+        padding: 12px 20px;
+        line-height: 0;
+        display: inline-block;
+        margin: 2px;
+    }
+}

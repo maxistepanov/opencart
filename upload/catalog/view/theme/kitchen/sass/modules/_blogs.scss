@@ -1,0 +1,143 @@
+.page-pavblog{
+	h1{
+		margin: 0;
+	}
+}
+.comment-warning{
+	color: #c12e2a;
+}
+.pav-blogs{
+	.blog-date{
+		background: $black;
+		color: $white;
+		display: block;
+		@include rtl-float-left();
+		font-size: $font-size-base + 4;
+		height: 70px;
+		line-height: normal;
+		@include rtl-margin-right(20px);
+		overflow: hidden;
+		padding: 12px;
+		.day {
+			padding: 0;
+			display: block;
+			text-align: center;
+		}
+	}
+	.blog-body{
+		overflow: hidden;
+		padding: 0 !important;
+		.text-link{
+			color: $black;
+			font-weight: 600;
+			.fa{
+				@include rtl-padding-left(5px);
+			}
+			&:hover,&:active,&:focus{
+				color: $link-hover-color;
+			}
+		}
+	}
+	.blog-title{
+		a{
+			color: $link-color;
+            font-size: 30px;
+		}
+	}
+	.blogs-item {
+		border-bottom: 1px solid $border-color;
+		padding: 20px 0;
+		.description {
+			margin: 20px 40px;
+            @include rtl-padding-left(20px);
+            @include rtl-border-left(3px solid $border-color);
+		}
+	}
+	.blog-meta{
+	  ul{
+		margin: 20px 0 10px;
+		  	li {
+			  display: inline-block;
+			  @include rtl-padding-right(13px);
+			  position: relative;
+			  &:before{
+			  	@include size(1px,15px);
+			  	background:#ccc;
+			  	content: "";
+			  	position:absolute;
+			  	@include rtl-left(-8px);
+			  	top: 5px;
+			  }
+			  &:first-child{
+			  	&:before{
+			  		content: none;
+			  	}
+			  }
+			  &:last-child{
+			  	@include rtl-border-right(none);
+			  }
+			}
+		}
+	}
+}
+.pav-categorymenu {
+	.head {
+		display: none;
+	}
+}
+.created {
+	font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.widget-blogs {
+    .created {
+        margin: 20px 0;
+    }
+    .description {
+        margin-top: 25px;
+    }
+    &.hd-description {
+        .description {
+            display: none;
+        }
+    }
+    &.blog-v2 {
+        .description {
+            display: none;
+        }
+
+        .latest-posts-body {
+            margin: 0;
+            padding: 30px;
+            border: 0;
+        }
+        .panel-body {
+            padding: 0;
+        }
+        .product-col {
+            @include rtl-border-right(1px solid $border-color);
+            &:last-child {
+                border: 0;
+                .latest-posts-body {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+.latest-posts {
+    .product-col:last-child {
+        .latest-posts-body {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            border-bottom: none;
+        }
+    }
+    .latest-posts-body {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $border-color;
+    }
+}

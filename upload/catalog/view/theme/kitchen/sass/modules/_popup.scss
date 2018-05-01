@@ -1,0 +1,38 @@
+.newsletter > .newsletter-content {
+    background-image: url("#{$image-theme-path}popup.png")!important;
+    height: 488px!important;
+    background-color: transparent!important;
+}
+.newsletter-content-inside {
+    width: 450px!important;
+    padding: 100px 50px;
+    font-family: $font-family-second;
+    color: #363636;
+    .welcome {
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    .heading_title {
+        font-size: 24px;
+        font-family: $font-family-second;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+    .newlestter-description {
+        font-size: 14px;
+        line-height: 18px;
+        font-family: $font-family-base;
+    }
+    .email {
+        border: 1px solid rgba(0,0,0,0.1);
+        background: transparent;
+        background: rgba(255,255,255,0.1);
+    }
+    .button-group {
+        position: relative;
+    }
+    .valid {
+        @include rtl-text-align-left();
+    }
+}

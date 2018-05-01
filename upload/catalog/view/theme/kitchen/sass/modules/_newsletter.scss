@@ -1,0 +1,29 @@
+//newleter
+.form-newsletter {
+	.btn-submit{
+        color: #fff;
+        &:before {
+            top: 3px;
+        }
+	}
+    .input-group-btn {
+        @include rtl-padding-left(20px);
+    }
+	.email {
+        background: #645c5a;
+        border: none;
+        color: $theme-color;
+	}
+
+}
+.valid {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 10;
+    margin-top: 20px;
+    @include rtl-left(0);
+    .alert {
+        width: auto;
+    }
+}

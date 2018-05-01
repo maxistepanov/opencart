@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme>
+		<footer>
+		<title>Footer</title>
+		 <description></description>
+
+		 <module>
+	 	 	<title>Paypal</title>
+	 	 	<field>
+	 	 		<name>module_paypal</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>0</lang>
+	 	 		<default><![CDATA[<img alt="payment" src="image/catalog/payment.png">]]></default>
+	 		</field>
+	 	 </module>
+
+	</footer>
+
+</theme>

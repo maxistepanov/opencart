@@ -1,0 +1,117 @@
+.product-block {
+    .bottom {
+        > * {
+            position: absolute;
+        }
+        .cart {
+            @include rtl-left(50%);
+            @include rtl-margin(-40px,0,0,-78px);
+        }
+        .btn {
+            cursor: pointer;
+        }
+    }
+    .quickview {
+        bottom: 50%;
+        top: 50%;
+        @include rtl-left(50%);
+        @include rtl-margin(20px,0,0,-60px);
+    }
+    .compare {
+        bottom: 50%;
+        top: 50%;
+        @include rtl-left(50%);
+        @include rtl-margin(20px,0,0,-20px);
+    }
+    .zoom {
+        bottom: 50%;
+        top: 50%;
+        @include rtl-left(50%);
+        @include rtl-margin(20px,0,0,20px);
+    }
+}
+@media (max-width: $screen-md){
+    .product-block {
+        .cart {
+            top: 50%;
+        }
+    }
+}
+@media (min-width: $screen-md){
+// animation action product
+    .product-block {
+        .image > a {
+            &:before {
+                position: absolute;
+                content: "";
+                background: rgba(54,47,45,0.74);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                @include rtl-left(0);
+                @include opacity(0);
+                @include transition(all 400ms ease 0s);
+            }
+        }
+        .wishlist {
+            @include transition(all 400ms ease 0s);
+            @include opacity(0);
+            @include transition-delay (0.25s);
+             @include transition-duration(0.6s);
+             @include transform(scale(1.5,1.5));
+            -webkit-transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+            transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+        }
+        .bottom {
+            > * {
+                visibility: hidden;
+                @include opacity(0);
+                @include transition(all 1s ease 0.01s);
+            }
+            .cart {
+                top: 40px;
+            }
+            .btn {
+                @include transition-duration(0.6s);
+                -webkit-transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+                transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);
+                @include transform(scale(1.5,1.5));
+                @include opacity(0);
+            }
+        }
+        .quickview {
+            @include transition-delay (0.1s);
+        }
+        .compare {
+            @include transition-delay (0.15s);
+        }
+        .zoom {
+            @include transition-delay (0.2s);
+        }
+
+        &:hover {
+            .image > a {
+                &:before {
+                    @include opacity(1);
+                }
+            }
+            .wishlist {
+                @include opacity(1);
+                @include transform(scale(1,1));
+            }
+            .cart {
+                top: 50%;
+                -webkit-transition: all 0.5s cubic-bezier(1.000, -0.530, 0.405, 1.425) 0.01s;
+                transition: all 0.5s cubic-bezier(1.000, -0.530, 0.405, 1.425) 0.01s;
+            }
+            .btn {
+                @include transform(scale(1,1));
+            }
+            .bottom > * {
+                @include opacity(1);
+                visibility: visible;
+            }
+        }
+    }
+
+}

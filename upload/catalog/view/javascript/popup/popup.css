@@ -1,0 +1,66 @@
+.newsletter {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;	
+	display: none;
+	
+}
+
+
+.newsletter:before{
+	position: absolute;
+	content: "";
+	background-color: #000;	
+	opacity: 0.9;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+.newsletter > .newsletter-content {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #444444;
+    display: block;
+    height: 450px;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 800px;
+    text-align: center;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#newclose{
+	cursor: pointer;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    z-index: 8040;
+    line-height: 25px;
+    color: #fff;
+    background-color: #000;
+
+}
+
+.newsletter-content-inside {
+	width: 380px;
+}
+
+.newsletter-content-inside .btn {
+	min-width: 135px;
+}
+
+.email {
+	background-color: #fff;
+}

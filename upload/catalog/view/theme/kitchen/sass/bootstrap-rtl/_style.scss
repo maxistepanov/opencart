@@ -1,0 +1,34 @@
+.rtl {
+	.zoomContainer .zoomWindow {
+	    right: 100% !important;
+	}
+
+    .addthis_toolbox a{
+        float: right;
+    }
+
+    .cart {
+        background-position: 90% center;
+        padding-left: 20px;
+        padding-right: 50px;
+    }
+    .carousel-control {
+        &.left {
+            left: auto;
+            right: -30px;
+        }
+        &.right {
+            right: -65px;
+        }
+    }
+
+    .thumbs-preview.default .carousel-controls {
+        .carousel-control.left {
+            right: auto;
+        }
+        .carousel-control.right {
+            right: 0;
+        }
+    }
+
+}
